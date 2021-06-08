@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/App.css";
 
 function Pokemon(props) {
   const renderTypes = () => {
@@ -8,11 +9,12 @@ function Pokemon(props) {
     });
   };
   return (
-    <article>
+    <article className="pokeCard">
       <img src={props.item.url} alt={props.item.name} />
       <h3>{props.item.name}</h3>
       <ul>{renderTypes()}</ul>
     </article>
   );
 }
+
 export default Pokemon;

@@ -1,5 +1,6 @@
 import React from "react";
 import Pokemon from "./Pokemon";
+import "../stylesheets/App.css";
 
 function PokeList(props) {
   //console.log(props); //Nos devuelve el array data
@@ -11,6 +12,6 @@ function PokeList(props) {
     );
   });
 
-  return <ul>{pokemonsItems}</ul>;
+  return <ul className="list">{pokemonsItems}</ul>;
 }
 export default PokeList;
