@@ -3,10 +3,10 @@ import Pokemon from "./Pokemon";
 
 function PokeList(props) {
   //console.log(props); //Nos devuelve el array data
-  const pokemonsItems = props.list.map((item, id) => {
+  const pokemonsItems = props.list.map((itemPokemon) => {
     return (
-      <li key={item.id}>
-        <Pokemon item={item} />
+      <li key={itemPokemon.id}>
+        <Pokemon item={itemPokemon} />
       </li>
     );
   });
