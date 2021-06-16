@@ -1,11 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../stylesheets/App.css";
 
 function Pokemon(props) {
   const renderTypes = () => {
-    //console.log(props.item.types); //Nos devuelve array con los types
-    return props.item.types.map((type) => {
-      return <li key={type.id}>{type}</li>;
+    return props.item.types.map((type, index) => {
+      return <li key={index}>{type}</li>;
     });
   };
   return (
@@ -18,3 +18,7 @@ function Pokemon(props) {
 }
 
 export default Pokemon;
+
+Pokemon.propTypes = {
+  pokemon: PropTypes.object,
+};
